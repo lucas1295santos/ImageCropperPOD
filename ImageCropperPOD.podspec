@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files = "ImageCropperPOD/**/*.{swift}"
-  s.resources = "ImageCropperPOD/**/*.{png,jpeg,jpg,storyboard,xib}"
+#s.resources = "ImageCropperPOD/**/*.{png,jpeg,jpg,storyboard,xib}"
 #s.source_files  = "Classes", "Classes/**/*.{h,m}"
 #s.exclude_files = "Classes/Exclude"
 
