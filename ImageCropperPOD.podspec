@@ -92,6 +92,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
+  s.source_files = "ImageCropperPOD/**/*.{swift}"
+  s.resources = "ImageCropperPOD/**/*.{png,jpeg,jpg,storyboard,xib}"
 #s.source_files  = "Classes", "Classes/**/*.{h,m}"
 #s.exclude_files = "Classes/Exclude"
 
