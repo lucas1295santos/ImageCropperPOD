@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		16BDD0EB207FC7550058F2CE /* ImageCropperPOD.h in Headers */ = {isa = PBXBuildFile; fileRef = 16BDD0E9207FC7550058F2CE /* ImageCropperPOD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16BDD0F2207FCE4A0058F2CE /* ImageCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BDD0F1207FCE4A0058F2CE /* ImageCropper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16BDD0E6207FC7550058F2CE /* ImageCropperPOD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageCropperPOD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16BDD0E9207FC7550058F2CE /* ImageCropperPOD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCropperPOD.h; sourceTree = "<group>"; };
 		16BDD0EA207FC7550058F2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16BDD0F1207FCE4A0058F2CE /* ImageCropper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				16BDD0E9207FC7550058F2CE /* ImageCropperPOD.h */,
+				16BDD0F1207FCE4A0058F2CE /* ImageCropper.swift */,
 				16BDD0EA207FC7550058F2CE /* Info.plist */,
 			);
 			path = ImageCropperPOD;
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					16BDD0E5207FC7550058F2CE = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -130,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16BDD0F2207FCE4A0058F2CE /* ImageCropper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +264,7 @@
 		16BDD0EF207FC7550058F2CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -276,6 +282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = lucasSantos.ImageCropperPOD;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +291,7 @@
 		16BDD0F0207FC7550058F2CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
