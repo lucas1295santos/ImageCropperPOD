@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
+  s.description  = <<-DESC "A simple tool to crop images in swift, i will think in something later, add a tutorial and so on"
                    DESC
 
   s.homepage     = "https://github.com/lucas1295santos/ImageCropperPOD"
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/lucas1295santos/ImageCropperPOD", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/lucas1295santos/ImageCropperPOD.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
