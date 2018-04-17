@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class ImageCropper {
+public class ImageCropper {
     
-    init() {
+    public init() {
         
     }
     
@@ -26,7 +26,7 @@ class ImageCropper {
      
      - Returns: A new image with dimensions from the toSize parameter
      */
-    func resizeAndCrop(image: UIImage, toSize desiredSize: CGSize, anchorTo: CroppingAnchor, percentualWidth: CGFloat, percentualHeight: CGFloat) -> UIImage {
+    public func resizeAndCrop(image: UIImage, toSize desiredSize: CGSize, anchorTo: CroppingAnchor, percentualWidth: CGFloat, percentualHeight: CGFloat) -> UIImage {
         var retImage = UIImage()
 
         let croppedImage = self.crop(image: image, anchor: anchorTo, percentualWidth: percentualWidth, percentualHeight: percentualHeight)
@@ -44,7 +44,7 @@ class ImageCropper {
      
      - Returns: A new image with dimensions from the toSize parameter
      */
-    func resize(image: UIImage, toSize size: CGSize) -> UIImage {
+    public func resize(image: UIImage, toSize size: CGSize) -> UIImage {
         
         let deisiredRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
@@ -65,7 +65,7 @@ class ImageCropper {
 
      - Returns: A new image with dimensions: width * percentualWidth, height * percentualHeight
      */
-    func crop(image: UIImage, anchor: CroppingAnchor, percentualWidth: CGFloat, percentualHeight: CGFloat) -> UIImage {
+    public func crop(image: UIImage, anchor: CroppingAnchor, percentualWidth: CGFloat, percentualHeight: CGFloat) -> UIImage {
         
         let imageWidth = image.size.width
         let imageHeight = image.size.height
