@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16218CEA2086719C00D89FCC /* CroppingAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16218CE92086719C00D89FCC /* CroppingAnchor.swift */; };
 		16BDD0EB207FC7550058F2CE /* ImageCropperPOD.h in Headers */ = {isa = PBXBuildFile; fileRef = 16BDD0E9207FC7550058F2CE /* ImageCropperPOD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16BDD0F2207FCE4A0058F2CE /* ImageCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BDD0F1207FCE4A0058F2CE /* ImageCropper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16218CE92086719C00D89FCC /* CroppingAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroppingAnchor.swift; sourceTree = "<group>"; };
 		16BDD0E6207FC7550058F2CE /* ImageCropperPOD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageCropperPOD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16BDD0E9207FC7550058F2CE /* ImageCropperPOD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCropperPOD.h; sourceTree = "<group>"; };
 		16BDD0EA207FC7550058F2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 				16BDD0E9207FC7550058F2CE /* ImageCropperPOD.h */,
 				16BDD0F1207FCE4A0058F2CE /* ImageCropper.swift */,
 				16BDD0EA207FC7550058F2CE /* Info.plist */,
+				16218CE92086719C00D89FCC /* CroppingAnchor.swift */,
 			);
 			path = ImageCropperPOD;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16218CEA2086719C00D89FCC /* CroppingAnchor.swift in Sources */,
 				16BDD0F2207FCE4A0058F2CE /* ImageCropper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
