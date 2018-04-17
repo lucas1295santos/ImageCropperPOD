@@ -77,14 +77,13 @@ public class ImageCropper {
         
         switch anchor {
         case .bottonLeft:
-            croppingRect = CGRect(x: 0, y: imageHeight/2, width: rectSize.width, height: rectSize.height)
+            croppingRect = CGRect(x: 0, y: imageHeight - rectSize.height, width: rectSize.width, height: rectSize.height)
         case .topLeft:
             croppingRect = CGRect(x: 0, y: 0, width: rectSize.width, height: rectSize.height)
         case .topRight:
-            croppingRect = CGRect(x: imageWidth / 2, y: 0, width: rectSize.width, height: rectSize.height)
-            //errado
+            croppingRect = CGRect(x: imageWidth - rectSize.width, y: 0, width: rectSize.width, height: rectSize.height)
         case .bottonRight:
-            croppingRect = CGRect(x: imageWidth / 2, y: imageHeight / 2, width: rectSize.width, height: rectSize.height)
+            croppingRect = CGRect(x: imageWidth - rectSize.width, y: imageHeight - rectSize.height, width: rectSize.width, height: rectSize.height)
         case .center:
             let rectOriginPoint = CGPoint.init(x: (imageWidth / 2) - (rectSize.width / 2), y: (imageHeight / 2) - (rectSize.height / 2))
             croppingRect = CGRect(origin: rectOriginPoint, size: rectSize)
