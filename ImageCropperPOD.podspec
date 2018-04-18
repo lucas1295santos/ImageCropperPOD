@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.ios.deployment_target = '8.0'
   s.name         = "ImageCropperPOD"
-  s.version      = "0.1.1"
+  s.version      = "1.0"
   s.summary      = "A simple tool to crop images in swift"
 
   # This description is used to generate tags and improve search results.
