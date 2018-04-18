@@ -11,7 +11,7 @@ import UIKit
 
 extension UIView: Imageble {
     
-    func extractImage() -> UIImage {
+    public func extractImage() -> UIImage {
         
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(bounds: bounds)

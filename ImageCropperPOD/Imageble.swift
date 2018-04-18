@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol Imageble {
+public protocol Imageble {
     func extractImage() -> UIImage
     func crop(anchor: CroppingAnchor, percentualWidth: CGFloat, percentualHeight: CGFloat) -> UIImage
     func resize(toSize size: CGSize) -> UIImage
@@ -26,7 +26,7 @@ extension Imageble {
      
      - Returns: A new image with dimensions: width * percentualWidth, height * percentualHeight
      */
-    func crop(anchor: CroppingAnchor, percentualWidth: CGFloat, percentualHeight: CGFloat) -> UIImage {
+    public func crop(anchor: CroppingAnchor, percentualWidth: CGFloat, percentualHeight: CGFloat) -> UIImage {
         
         let image = self.extractImage()
         
@@ -64,7 +64,7 @@ extension Imageble {
      
      - Returns: A new image with dimensions from the toSize parameter
      */
-    func resize(toSize size: CGSize) -> UIImage {
+    public func resize(toSize size: CGSize) -> UIImage {
         
         let image = self.extractImage()
         

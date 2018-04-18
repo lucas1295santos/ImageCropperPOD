@@ -11,7 +11,7 @@ import UIKit
 
 extension UIImage: Imageble {
     
-    func extractImage() -> UIImage {
+    public func extractImage() -> UIImage {
         return self
     }
 }
