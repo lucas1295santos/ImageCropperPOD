@@ -1,4 +1,4 @@
-#Crop and resize images without breaking a sweat!
+# Crop and resize images without breaking a sweat!
 
 Quick exemple:
 ```swift
