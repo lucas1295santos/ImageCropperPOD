@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16218CEA2086719C00D89FCC /* CroppingAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16218CE92086719C00D89FCC /* CroppingAnchor.swift */; };
+		164DA65B2087D2C90024E52D /* Imageble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DA65A2087D2C90024E52D /* Imageble.swift */; };
+		164DA65D2087D33F0024E52D /* ImagebleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DA65C2087D33F0024E52D /* ImagebleUIView.swift */; };
+		164DA6602087D4C60024E52D /* ImagebleUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DA65F2087D4C60024E52D /* ImagebleUIViewController.swift */; };
+		164DA6622087DBD80024E52D /* ImagebleUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DA6612087DBD80024E52D /* ImagebleUIImage.swift */; };
 		16BDD0EB207FC7550058F2CE /* ImageCropperPOD.h in Headers */ = {isa = PBXBuildFile; fileRef = 16BDD0E9207FC7550058F2CE /* ImageCropperPOD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16BDD0F2207FCE4A0058F2CE /* ImageCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BDD0F1207FCE4A0058F2CE /* ImageCropper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16218CE92086719C00D89FCC /* CroppingAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroppingAnchor.swift; sourceTree = "<group>"; };
+		164DA65A2087D2C90024E52D /* Imageble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imageble.swift; sourceTree = "<group>"; };
+		164DA65C2087D33F0024E52D /* ImagebleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagebleUIView.swift; sourceTree = "<group>"; };
+		164DA65F2087D4C60024E52D /* ImagebleUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagebleUIViewController.swift; sourceTree = "<group>"; };
+		164DA6612087DBD80024E52D /* ImagebleUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagebleUIImage.swift; sourceTree = "<group>"; };
 		16BDD0E6207FC7550058F2CE /* ImageCropperPOD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageCropperPOD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16BDD0E9207FC7550058F2CE /* ImageCropperPOD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCropperPOD.h; sourceTree = "<group>"; };
 		16BDD0EA207FC7550058F2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +39,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		164DA65E2087D3430024E52D /* ImagebleExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				164DA65C2087D33F0024E52D /* ImagebleUIView.swift */,
+				164DA65F2087D4C60024E52D /* ImagebleUIViewController.swift */,
+				164DA6612087DBD80024E52D /* ImagebleUIImage.swift */,
+			);
+			path = ImagebleExtensions;
+			sourceTree = "<group>";
+		};
 		16BDD0DC207FC7550058F2CE = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +71,9 @@
 				16BDD0E9207FC7550058F2CE /* ImageCropperPOD.h */,
 				16BDD0F1207FCE4A0058F2CE /* ImageCropper.swift */,
 				16BDD0EA207FC7550058F2CE /* Info.plist */,
+				16218CE92086719C00D89FCC /* CroppingAnchor.swift */,
+				164DA65A2087D2C90024E52D /* Imageble.swift */,
+				164DA65E2087D3430024E52D /* ImagebleExtensions */,
 			);
 			path = ImageCropperPOD;
 			sourceTree = "<group>";
@@ -134,7 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16218CEA2086719C00D89FCC /* CroppingAnchor.swift in Sources */,
+				164DA6602087D4C60024E52D /* ImagebleUIViewController.swift in Sources */,
 				16BDD0F2207FCE4A0058F2CE /* ImageCropper.swift in Sources */,
+				164DA65D2087D33F0024E52D /* ImagebleUIView.swift in Sources */,
+				164DA65B2087D2C90024E52D /* Imageble.swift in Sources */,
+				164DA6622087DBD80024E52D /* ImagebleUIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

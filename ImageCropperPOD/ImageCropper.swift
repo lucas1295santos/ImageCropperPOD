@@ -9,34 +9,88 @@
 import Foundation
 import UIKit
 
-class ImageCropper {
+public class ImageCropper {
     
-    init() {
+    public init() {
         
     }
     
-    func cropAnImage(imageToCrop: UIImage) -> UIImage {
+    /**
+     Crop an UIImage, to a percentage (values between 0 to 1) according to a anchor point, and reisze it to the desired size
+     
+     - Parameter image: The image to crop
+     - Parameter toSize: The return size of the cropped image
+     - Parameter anchor: Starts the cropping from this anchor point
+     - Parameter percentualWidth: Value between 0 and 1 for width
+     - Parameter percentualHeight: Value between 0 and 1 for height
+     
+     - Returns: A new image with dimensions from the toSize parameter
+     */
+    public func resizeAndCrop(image: UIImage, toSize desiredSize: CGSize, anchorTo: CroppingAnchor, percentualWidth: CGFloat, percentualHeight: CGFloat) -> UIImage {
         var retImage = UIImage()
-        //Settups to the desiredSize of the output image
-        let desiredSize = CGSize(width: 248.0, height: 375.0)
-        let deisiredRect = CGRect(x: 0, y: 0, width: 248.0, height: 375.0)
+
+        let croppedImage = self.crop(image: image, anchor: anchorTo, percentualWidth: percentualWidth, percentualHeight: percentualHeight)
         
-        //Do the resizing
-        UIGraphicsBeginImageContextWithOptions(desiredSize, false, 0.0)
-        imageToCrop.draw(in: deisiredRect)
+        retImage = self.resize(image: croppedImage, toSize: desiredSize)
+        
+        return retImage
+    }
+    
+    /**
+     Resize an UIImage, to the parameter toSize
+     
+     - Parameter image: The image to crop
+     - Parameter toSize: The return size of the cropped image
+     
+     - Returns: A new image with dimensions from the toSize parameter
+     */
+    public func resize(image: UIImage, toSize size: CGSize) -> UIImage {
+        
+        let deisiredRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        image.draw(in: deisiredRect)
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        let imageWidth = resizedImage.size.width
-        let imageHeight = resizedImage.size.height
+        return resizedImage
+    }
+    
+    /**
+     Crop an UIImage, to a percentage (values between 0 to 1) according to a anchor point
+     
+     - Parameter image: The image to crop
+     - Parameter anchor: Starts the cropping from this anchor point
+     - Parameter percentualWidth: Value between 0 and 1 for width
+     - Parameter percentualHeight: Value between 0 and 1 for height
+
+     - Returns: A new image with dimensions: width * percentualWidth, height * percentualHeight
+     */
+    public func crop(image: UIImage, anchor: CroppingAnchor, percentualWidth: CGFloat, percentualHeight: CGFloat) -> UIImage {
         
-        //Do the cropping
-        let rectOriginPoint = CGPoint.init(x: imageWidth/3 * 2, y: imageHeight/3)
-        let rectSize = CGSize(width: imageWidth, height: imageHeight)
-        let cropped = resizedImage.cgImage!.cropping(to: CGRect(origin: rectOriginPoint, size: rectSize))
+        let imageWidth = image.size.width
+        let imageHeight = image.size.height
+        print(imageWidth)
         
-        retImage = UIImage(cgImage: cropped!)
+        let rectSize = CGSize(width: imageWidth * percentualWidth, height: imageHeight * percentualHeight)
         
-        return retImage
+        var croppingRect = CGRect()
+        
+        switch anchor {
+        case .bottonLeft:
+            croppingRect = CGRect(x: 0, y: imageHeight - rectSize.height, width: rectSize.width, height: rectSize.height)
+        case .topLeft:
+            croppingRect = CGRect(x: 0, y: 0, width: rectSize.width, height: rectSize.height)
+        case .topRight:
+            croppingRect = CGRect(x: imageWidth - rectSize.width, y: 0, width: rectSize.width, height: rectSize.height)
+        case .bottonRight:
+            croppingRect = CGRect(x: imageWidth - rectSize.width, y: imageHeight - rectSize.height, width: rectSize.width, height: rectSize.height)
+        case .center:
+            let rectOriginPoint = CGPoint.init(x: (imageWidth / 2) - (rectSize.width / 2), y: (imageHeight / 2) - (rectSize.height / 2))
+            croppingRect = CGRect(origin: rectOriginPoint, size: rectSize)
+        }
+        
+        let croppedImage = image.cgImage!.cropping(to: croppingRect)
+        
+        return UIImage(cgImage: croppedImage!)
     }
 }

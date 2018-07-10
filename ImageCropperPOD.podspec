@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.ios.deployment_target = '8.0'
   s.name         = "ImageCropperPOD"
-  s.version      = "0.0.1"
+  s.version      = "1.0"
   s.summary      = "A simple tool to crop images in swift"
 
   # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/lucas1295santos/ImageCropperPOD"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+# s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif" #
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -92,8 +92,11 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.swift_version = '4.0'
+  s.source_files = "ImageCropperPOD/**/*.{swift}"
+#s.resources = "ImageCropperPOD/**/*.{png,jpeg,jpg,storyboard,xib}"
+#s.source_files  = "Classes", "Classes/**/*.{h,m}"
+#s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 

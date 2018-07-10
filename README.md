@@ -1,4 +1,7 @@
-Crop and resize images without breaking a sweat!
+# ImageCropperPOD
+A simple tool to crop images in swift
+
+## Crop and resize images without breaking a sweat!
 
 Quick exemple:
 ```swift
@@ -28,4 +31,3 @@ So as exemple, a croping getting the topLeft quarter of a image (cropping in hal
 ```swift
 let croppedImage = cropper.crop(image: originalImage, anchor: .topLeft, percentualWidth: 0.5, percentualHeight: 0.5)
 ```
-
